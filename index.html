@@ -25,13 +25,15 @@
 
                      <div class="col-md-5 center-item">
                         <div class="input-group number-spinner">
-                           <button id="phoneDecrease" onclick="phoneProductChangeHandler(false)" class="btn btn-default"><i class="fas fa-minus"></i></button>
+                           <button onclick="productChangeHandler('phone', false)" class="btn btn-default"><i
+                                 class="fas fa-minus"></i></button>
                            <!-- <button id="phoneDecrease" class="btn btn-default"><i class="fas fa-minus"></i></button> -->
-                           <input id="phoneCount" type="text" class="form-control text-center" value="1" >
-                           <button onclick="phoneProductChangeHandler(true)" class="btn btn-default" ><i class="fas fa-plus" ></i></button>
-                           <!-- <button id="phoneIncrease" class="btn btn-default" ><i class="fas fa-plus" ></i></button> -->
+                           <input id="phoneCount" type="text" class="form-control text-center" value="1">
+                           <button onclick="productChangeHandler('phone', true)" class="btn btn-default"><i
+                                 class="fas fa-plus"></i></button>
+                           <!-- <button id="phoneInrease" class="btn btn-default"><i class="fas fa-plus"></i></button> -->
                         </div>
-                        <h5 id ="phoneTotal">$1219 </h5>
+                        <h5 id="phoneTotal">$1219 </h5>
                         <img src="images/remove.png" alt="" class="remove-item">
                      </div>
                   </div>
@@ -42,24 +44,23 @@
                         <img src="images/product-2.png" alt="">
                         <h5>iPhone 11 Silicone Case - Black</h5>
                      </div>
-
                      <div class="col-md-5 center-item">
                         <div class="input-group number-spinner">
-                           <button id="caseDecrease" onclick="caseProductChangeHandler(false)" class="btn btn-default"><i class="fas fa-minus"></i></button>
-                           <!-- <button id="caseDecrease"  class="btn btn-default"><i class="fas fa-minus"></i></button> -->
-                           <input id ="caseCount" type="text" class="form-control text-center" value="1">
-                           <button onclick="caseProductChangeHandler(true)" class="btn btn-default"><i class="fas fa-plus"></i></button>
-                           <!-- <button id ="caseIncrease"class="btn btn-default"><i class="fas fa-plus"></i></button> -->
+                           <button onclick="productChangeHandler('case', false)" class="btn btn-default"><i
+                                 class="fas fa-minus"></i></button>
+                           <!-- <button id="caseDecrease" class="btn btn-default"><i class="fas fa-minus"></i></button> -->
+                           <input id="caseCount" type="text" class="form-control text-center" value="1">
+                           <button onclick="productChangeHandler('case', true)" class="btn btn-default"><i
+                                 class="fas fa-plus"></i></button>
+                           <!-- <button id="caseInrease" class="btn btn-default"><i class="fas fa-plus"></i></button> -->
                         </div>
-                        <h5 id ="caseTotal">$59</h5>
+                        <h5 id="caseTotal">$59</h5>
                         <img src="images/remove.png" alt="" class="remove-item">
                      </div>
                   </div>
                </div>
-
                <div class="cart-item">
                   <div class="row">
-
                      <div class="col-md-8">
                         <h5>Subtotal: </h5>
                         <h5>Tax:</h5>
@@ -67,9 +68,9 @@
                      </div>
 
                      <div class="col-md-4 status">
-                        <h5 >$ <span id="checkoutBalance"> 1,278 </span> </h5>
-                        <h5>$0</h5>
-                        <h5>$ <span id="total"> 1,278 </span> </h5>
+                        <h5 id="total-Price">$ 1,278 </h5>
+                        <h5 id="tax-amount">$0</h5>
+                        <h5 id="grand-total">$ 1,278 </h5>
                      </div>
                   </div>
                </div>
@@ -80,7 +81,7 @@
          </div>
       </div>
    </section>
-  <script src="plugin.js">
+   <script src="plugin.js">
 
   </script>
 </body>
