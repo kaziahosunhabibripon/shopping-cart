@@ -1,13 +1,13 @@
 // Phone Increase handler
-document.getElementById("phoneIncrease").addEventListener("click", function() { 
-    phoneProductChangeHandler(true);
-})
+// document.getElementById("phoneIncrease").addEventListener("click", function() { 
+//     phoneProductChangeHandler(true);
+// })
 
-// Phone Decrease handler
-document.getElementById("phoneDecrease").addEventListener("click", function(){
-    phoneProductChangeHandler(false);
+// // Phone Decrease handler
+// document.getElementById("phoneDecrease").addEventListener("click", function(){
+//     phoneProductChangeHandler(false);
     
-})
+// })
 // Phone product change handler function
 function phoneProductChangeHandler(isIncrease){
     const phoneInput = document.getElementById("phoneCount");
@@ -55,15 +55,15 @@ function phoneProductChangeHandler(isIncrease){
 
 // Case increase handler
 
-document.getElementById("caseIncrease").addEventListener("click", function () {
-    caseProductChangeHandler(true);
-});
+// document.getElementById("caseIncrease").addEventListener("click", function () {
+//     caseProductChangeHandler(true);
+// });
 
 // Case Decrease handler
 
-document.getElementById("caseDecrease").addEventListener("click", function () {
-    caseProductChangeHandler(false);
-});
+// document.getElementById("caseDecrease").addEventListener("click", function () {
+//     caseProductChangeHandler(false);
+// });
 
 // Product item change handler function
 
