@@ -1,60 +1,84 @@
+// Phone Increase handler
+document.getElementById("phoneIncrease").addEventListener("click", function() { 
+    phoneProductChangeHandler(true);
+})
 
-      // Phone Item add event handler
+// Phone Decrease handler
+document.getElementById("phoneDecrease").addEventListener("click", function(){
+    phoneProductChangeHandler(false);
+    
+})
+// Phone product change handler function
+function phoneProductChangeHandler(isIncrease){
+    const phoneInput = document.getElementById("phoneCount");
+    const phoneInputCount = parseInt(phoneInput.value);
 
-      function addItem(addPhone, phoneQuantity){
-      document.getElementById("addPhone").addEventListener("click", function(){
-         const phone = document.getElementById("phoneQuantity").value;
-         const newPhone = parseInt(phone) +1;
-         document.getElementById("phoneQuantity").value = newPhone;
+    // const phoneNewInputCount = (phoneInputCount - 1);
+    let phoneNewInputCount = phoneInputCount;
+    if(isIncrease == true){
+        phoneNewInputCount = (phoneInputCount +1);
+    }
+    if(isIncrease == false && phoneInputCount > 0){
+        phoneNewInputCount = (phoneInputCount - 1);
+    }
+    phoneInput.value = phoneNewInputCount;
+    const phoneTotal = phoneNewInputCount *1219;
+    document.getElementById("phoneTotal").innerText = "$" + phoneTotal;
 
-      })
-   }
-
-   addItem(addPhone, phoneQuantity);
-
-   // Phone item remove handler
-
-   function removeItem(removePhone, phoneQuantity){
-      document.getElementById("removePhone").addEventListener("click", function(){
-         const phoneItem = document.getElementById("phoneQuantity").value;
-         const phoneValue = parseInt(phoneItem) - 1;
-         const resetItem = document.getElementById("phoneQuantity").value = phoneValue;
-         if(resetItem == -1){
-         document.getElementById("phoneQuantity").value = 0;
-      }
-      })
-   }
-
-   removeItem(removeItem, phoneQuantity);
-
-      
-      // Price  add handler for phone
-
-      function priceAddCalculation(addPhone, phonePrice){
-         document.getElementById("addPhone").addEventListener("click", function(){
-            const phonePrice = document.getElementById("phonePrice").innerText;
-            const newPhonePrice = parseInt(phonePrice)+1219;
-            document.getElementById("phonePrice").innerText = newPhonePrice;
-         })
-      }
-      priceAddCalculation(addPhone, phonePrice);
-
-// price remove handler for phone
-function priceRemoveCalculation(removePhone, phonePrice){
-   document.getElementById("removePhone").addEventListener("click", function(){
-      const removePhonePrice = document.getElementById("phonePrice").innerText;
-      const newRemovePhonePrice = parseInt(removePhonePrice) -1219;
-      const resetItemPrice = document.getElementById("phonePrice").innerText = newRemovePhonePrice;
-      if(resetItemPrice == -1219) {
-         document.getElementById("phonePrice").innerText = 0;
-      }
-   })
+    
 }
-priceRemoveCalculation(removePhone, phonePrice);
-       
-     
-
-   
-         
 
 
+
+//  case increase handler
+// document.getElementById("caseIncrease").addEventListener("click", function () {
+//     const caseInput = document.getElementById("caseCount");
+//     const caseInputCount = parseInt(caseInput.value);
+//     const caseNewInputCount = (caseInputCount + 1);
+//     caseInput.value = caseNewInputCount;
+//     const caseTotal = caseNewInputCount * 59;
+//     document.getElementById("caseTotal").innerText = "$" + caseTotal;
+
+
+// })
+
+//  Case Decrease handler
+// document.getElementById("caseDecrease").addEventListener("click", function () {
+//     const caseInput = document.getElementById("caseCount");
+//     const caseInputCount = parseInt(caseInput.value);
+//     const caseNewInputCount = (caseInputCount - 1);
+//     caseInput.value = caseNewInputCount;
+//     const caseTotal = caseNewInputCount * 59;
+//     document.getElementById("caseTotal").innerText = "$" + caseTotal;
+// })
+
+
+// Case increase handler
+
+document.getElementById("caseIncrease").addEventListener("click", function () {
+    caseProductChangeHandler(true);
+});
+
+// Case Decrease handler
+
+document.getElementById("caseDecrease").addEventListener("click", function () {
+    caseProductChangeHandler(false);
+});
+
+// Product item change handler function
+
+function caseProductChangeHandler(isIncrease){
+    const caseInput = document.getElementById("caseCount");
+    const caseInputCount = parseInt(caseInput.value);
+
+    let caseNewInputCount = caseInputCount;
+    if(isIncrease == true){
+        caseNewInputCount = caseInputCount + 1 ;
+    }
+    if (isIncrease == false && caseInputCount >0){
+        caseNewInputCount = caseInputCount - 1 ;
+    }
+    caseInput.value = caseNewInputCount;
+    const caseTotal = caseNewInputCount * 59;
+    document.getElementById("caseTotal").innerText = "$" + caseTotal;
+}
